@@ -1,0 +1,43 @@
+DOM del sitio:
+
+html
+└── body
+    ├── header.site-header
+    │   └── div.container.header-inner
+    │       ├── a.brand
+    │       └── nav.main-nav
+    │           ├── a
+    │           ├── a
+    │           ├── a
+    │           └── a
+    ├── main
+    │   ├── section.hero.section-hero
+    │   │   └── div.container.hero-content
+    │   │       ├── span.eyebrow
+    │   │       ├── h1
+    │   │       ├── p
+    │   │       └── div.hero-actions
+    │   │           ├── a.btn.btn-primary
+    │   │           └── a.btn.btn-secondary
+    │   ├── section.features.section-light
+    │   │   └── div.container
+    │   │       ├── h2
+    │   │       └── div.grid-3.cards
+    │   │           ├── article.card
+    │   │           ├── article.card
+    │   │           └── article.card
+    │   └── section.section-darker
+    │       └── div.container.split-layout
+    │           ├── div
+    │           │   ├── h2
+    │           │   ├── p
+    │           │   └── ul
+    │           └── div.image-card
+    │               └── p
+    └── footer.site-footer
+        └── div.container.footer-content
+            ├── p
+            └── nav.footer-nav
+                ├── a
+                ├── a
+                └── a
