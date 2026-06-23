@@ -1,9 +1,10 @@
 var btnMenu=document.querySelector('.menu-toggle')
 var nav=document.querySelector('.main-nav')
 var btnDrop=document.querySelector('.drop-btn')
-var slides=document.querySelectorAll('.slide')
-var btnPrev=document.querySelector('.carousel-btn.prev')
-var btnNext=document.querySelector('.carousel-btn.next')
+var carousel=document.querySelector('.carousel')
+var slides=carousel?carousel.querySelectorAll('.slide'):document.querySelectorAll('.slide')
+var btnPrev=carousel?carousel.querySelector('.carousel-btn.prev'):document.querySelector('.carousel-btn.prev')
+var btnNext=carousel?carousel.querySelector('.carousel-btn.next'):document.querySelector('.carousel-btn.next')
 var acordeones=document.querySelectorAll('.acordeon-btn')
 var hero=document.querySelector('.section-hero')
 var carrIdx=0

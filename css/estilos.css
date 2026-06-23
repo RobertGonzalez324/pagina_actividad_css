@@ -239,11 +239,12 @@ body::before {
 
 .cards {
   display: grid;
-  gap: 1.4rem;
+  gap: 1.6rem;
 }
 
-.carousel-wrap {
-  padding: 3.5rem 0;
+.info-section .cards + .cards,
+.section-values .cards + .cards {
+  margin-top: 2rem;
 }
 
 .carousel {
@@ -251,8 +252,6 @@ body::before {
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--surface-soft);
-  border: 1px solid var(--border);
-  min-height: 300px;
 }
 
 .carousel-track {
@@ -268,11 +267,13 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 }
 
 .slide.active {
   opacity: 1;
   position: relative;
+  pointer-events: auto;
 }
 
 .slide img {
@@ -415,7 +416,54 @@ body::before {
 }
 
 .info-section {
+  padding: 3.5rem 0 5rem;
+}
+
+.section-values,
+.section-quotes {
   padding: 3.5rem 0;
+}
+
+.section-lead {
+  margin: 0 0 1.5rem;
+  color: var(--text-soft);
+  max-width: 760px;
+}
+
+.valor-card h4 {
+  margin: 0.75rem 0 0.9rem;
+  color: var(--accent);
+}
+
+.quote-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.quote-card blockquote {
+  margin: 0 0 1rem;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.8;
+}
+
+.quote-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .grid-3,
+  .split-layout,
+  .contact-grid,
+  .services-grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .services-grid {
@@ -445,6 +493,32 @@ body::before {
 
 .auth-card-secondary {
   background: rgba(255, 255, 255, 0.04);
+}
+
+.auth-card form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.auth-card form input,
+.auth-card form button {
+  width: 100%;
+  display: block;
+}
+
+.auth-card form input {
+  margin-bottom: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+}
+
+.auth-card form input::placeholder {
+  color: var(--text-soft);
 }
 
 .register-panel {
